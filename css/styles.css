@@ -14,15 +14,19 @@
     --main-span-color: hsl(234, 12%, 34%);
     --main-text-color: hsl(229, 6%, 66%);
     --main-cards-bg-color:hsl(0, 0%, 98%);
-    --main-font-size: 15px;
-    --main-font-family: 'Poppins', sans-serif;
+    --main-gradient-color: linear-gradient(to right, rgb(67, 124, 205), rgb(69, 214, 202));
 }
 
 body {
+    background: url('../images/web.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(2px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -31,8 +35,33 @@ body {
     margin: 50px;
 }
 
+h1 {
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 1rem;
+    color: var(--main-span-color);
+}
+
+h1, h3 {
+    background: var(--main-gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 200;
+    color: var(--main-text-color);
+}
+
 img {
-    width: 60px;
+    width: 50px;
 }
 
 .hero-text {
@@ -41,22 +70,74 @@ img {
     text-align: center;
 }
 
+.hero-text p {
+    font-size: 1rem;
+    padding: 20px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin: 30px;
+    justify-items: center;
+}
+
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, 300px);
+    grid-template-columns: repeat(3, 300px);
     gap: 10px;
     margin: 20px;
+    padding: 10px;
+    margin-left: 120px;
 }
 
 .card-1, .card-2, .card-3, .card-4 {
     background-color: var(--main-cards-bg-color);
-    border: 1px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 200px;
-    padding: 20px;
+    padding: 30px;
+    gap: 10px;
+}
+
+.card-1 {
+    grid-column: 1/2;
+    border-top: 4px solid;
+    border-top-color: var(--main-card1-color);
+    position: absolute;
+    top: 45%;
+    left: 200px;
+    width: 300px;
+}
+
+.card-2 {
+    grid-column: 2/3;
+    border-top: 4px solid;
+    border-top-color: var(--main-card2-color);
+}
+
+.card-3 {
+    grid-column: 3;
+    border-top: 4px solid;
+    border-top-color: var(--main-card3-color);
+    position: absolute;
+    top: 45%;
+    right: 200px;
+    width: 300px;
+}
+
+.card-4 {
+    grid-column: 2/3;
+    border-top: 4px solid;
+    border-top-color: var(--main-card4-color);
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .attribution {
