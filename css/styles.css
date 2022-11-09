@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -13,7 +15,48 @@
     --main-text-color: hsl(229, 6%, 66%);
     --main-cards-bg-color:hsl(0, 0%, 98%);
     --main-font-size: 15px;
-    --main-font-family: 'poppins', 'san-serif';
+    --main-font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    line-height: 1.4;
+    max-width: 1440px;
+    margin: 50px;
+}
+
+img {
+    width: 60px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 10px;
+    margin: 20px;
+}
+
+.card-1, .card-2, .card-3, .card-4 {
+    background-color: var(--main-cards-bg-color);
+    border: 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    padding: 20px;
 }
 
 .attribution {
