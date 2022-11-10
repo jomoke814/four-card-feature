@@ -11,10 +11,12 @@
     --main-card2-color: hsl(0, 78%, 62%);
     --main-card3-color: hsl(212, 86%, 64%);
     --main-card4-color: hsl(34, 97%, 64%);
+    --main-card-bx-shadow: 0px 0px 5px rgba(0,0,0.5);
     --main-span-color: hsl(234, 12%, 34%);
-    --main-text-color: hsl(229, 6%, 66%);
+    --main-text-color: hsl(180, 82%, 52%);
     --main-cards-bg-color:hsl(0, 0%, 98%);
     --main-gradient-color: linear-gradient(to right, rgb(67, 124, 205), rgb(69, 214, 202));
+    --main-white_30: hsl(0, 0%, 100%, 0.3);
 }
 
 body {
@@ -133,6 +135,10 @@ img {
     grid-column: 2/3;
     border-top: 4px solid;
     border-top-color: var(--main-card4-color);
+}
+
+.card-1:hover, .card-2:hover, .card-3:hover, .card-4:hover{
+    background: linear-gradient(to right, transparent 50%, var(--white_30) 100%);
 }
 
 .icons {
