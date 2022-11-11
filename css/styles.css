@@ -104,6 +104,31 @@ img {
     padding: 30px;
     gap: 10px;
     margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-1::before, .card-2::before, .card-3::before, .card-4::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 200px;
+    left: -80px;
+    top: 1px;
+    transform: skewY(-50deg);
+}
+
+.card-1:hover:before, .card-2:hover:before, .card-3:hover:before, .card-4:hover:before {
+    animation: slide 1s;
+}
+
+@keyframes slide {
+    0%,100% {
+        left: -80PX;
+    }
+    50% {
+        left: 100%;
+    }
 }
 
 .card-1 {
